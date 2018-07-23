@@ -171,7 +171,7 @@ public class LevelCalcByChunk {
         MaterialData generic = new MaterialData(md.getItemType());
         if (limitCount.containsKey(md) && Settings.blockValues.containsKey(md)) {
             int count = limitCount.get(md);
-            if (count > 0) {
+            if (count != 0) {
                 limitCount.put(md, --count);
                 return Settings.blockValues.get(md);
             } else {
@@ -180,7 +180,7 @@ public class LevelCalcByChunk {
             }
         } else if (limitCount.containsKey(generic) && Settings.blockValues.containsKey(generic)) {
             int count = limitCount.get(generic);
-            if (count > 0) {
+            if (count != 0) {
                 limitCount.put(generic, --count);
                 return Settings.blockValues.get(generic);
             } else {
