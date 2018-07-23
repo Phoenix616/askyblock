@@ -70,6 +70,18 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<excludes>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_7_R3/*.java</exclude>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_7_R4/*.java</exclude>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_8_R1/*.java</exclude>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_8_R2/*.java</exclude>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_8_R3/*.java</exclude>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_9_R1/*.java</exclude>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_9_R2/*.java</exclude>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_10_R1/*.java</exclude>
+						<exclude>com/wasteofplastic/askyblock/nms/v1_11_R1/*.java</exclude>
+						<!--<exclude>com/wasteofplastic/askyblock/nms/v1_12_R1/*.java</exclude>-->
+					</excludes>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -122,11 +134,17 @@
 			<scope>provided</scope>
 			<type>jar</type>
 		</dependency>
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot</artifactId>
+			<scope>compile</scope>
+			<version>1.12-R0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- These server binaries have to be provided by you and put in the server.jars 
 			folder You can build the latest versions using the BuildTools.jar tool from 
 			spigotmc.org. If you do not have or do not need a server version, delete 
 			the reference here and delete the corresponding package in the source code 
-			starting with com.wasteofplastic.askyblock.nms. -->
+			starting with com.wasteofplastic.askyblock.nms. --><!--
 		<dependency>
 			<groupId>bukkit.org</groupId>
 			<artifactId>craftbukkit</artifactId>
@@ -217,7 +235,7 @@
 			<scope>system</scope>
 			<systemPath>${server.jars}/spigot-1649.jar</systemPath>
 			<version>1.7.10</version>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 	<repositories>
 		<repository>
