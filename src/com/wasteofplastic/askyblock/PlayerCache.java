@@ -98,6 +98,9 @@ public class PlayerCache {
             } catch (Exception e) {
                 // Be silent.
                 //plugin.getLogger().severe("Player add request for a null UUID");
+                if (playerUUID != null) {
+                    plugin.getLogger().log(java.util.logging.Level.INFO, "[DEBUG] An error occurred while trying to add player " + playerUUID, e);
+                }
             }
         }
     }
