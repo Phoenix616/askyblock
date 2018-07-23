@@ -3462,7 +3462,7 @@ public class IslandCmd implements CommandExecutor, TabCompleter {
                 } else if (Settings.blockValues.containsKey(new MaterialData(item.getType()))) {
                     value = (int)((double)Settings.blockValues.get(new MaterialData(item.getType())) * multiplier);
                 }
-                if (value > 0) {
+                if (value != 0) {
                     // [name] placed here may be worth [value]
                     Util.sendMessage(player, ChatColor.GREEN + (plugin.myLocale(player.getUniqueId()).islandblockValue.replace("[name]", Util.prettifyText(item.getType().name())).replace("[value]", String.valueOf(value))));
                 } else {
